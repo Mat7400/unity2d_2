@@ -15,11 +15,33 @@ public class script : MonoBehaviour
         // На сенсорном экране телефона есть координаты и есть координаты нажатия на экран
         // можно например сделать область управления (круг) и если координаты нажатия
         // попали в сектор круга "влево" то и объект едет влево
-        // 
+        // или сделать 4 кнопки по нажатию на которых отслеживать управление
+        //
         // можно сприпт управления потом прикрутить к нашей старой игре
 
     }
-
+    public void upClick()
+    {
+        var gobject = GameObject.Find("image 3");
+        var transf = gobject.GetComponent<Transform>();
+        int speed = 1;
+        transf.Translate(0, speed, 0);
+    }
+    public void downClick()
+    {
+        var gobject = GameObject.Find("image 3");
+        var transf = gobject.GetComponent<Transform>();
+        int speed = 1;
+        transf.Translate(0, -speed, 0);
+    }
+    public void leftClick()
+    {
+       //todo сделать во вторник 05.04
+    }
+    public void rightClick()
+    {
+        //todo сделать во вторник 05.04
+    }
     // Update is called once per frame
     void Update()
     {
